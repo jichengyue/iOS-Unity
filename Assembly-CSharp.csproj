@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\MoveController.cs" />
      <Compile Include="Assets\Scripts\ClickListener.cs" />
+     <Compile Include="Assets\Scripts\Image3DViewer.cs" />
      <Compile Include="Assets\Scripts\MainLight.cs" />
      <Compile Include="Assets\Scripts\MainTouchWrap.cs" />
      <Compile Include="Assets\Scripts\Module\SignalSender.cs" />

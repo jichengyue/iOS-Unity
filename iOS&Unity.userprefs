@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MoveController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Image3DViewer.cs">
     <Files>
-      <File FileName="Assets/MoveController.cs" Line="70" Column="71" />
-      <File FileName="Assets/Scripts/Move_buttom_FPC.cs" Line="25" Column="39" />
+      <File FileName="Assets/Scripts/Image3DViewer.cs" Line="23" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Sean/Project/Unity/iOS&amp;Unity/Assets/Scripts/Image3DViewer.cs" line="18" />
+      <Breakpoint file="/Users/Sean/Project/Unity/iOS&amp;Unity/Assets/Scripts/Image3DViewer.cs" line="22" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
