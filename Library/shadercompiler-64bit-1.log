@@ -1,3 +1,29 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2097238784
 Cmd: getPlatforms
+Cmd: preprocess
+  insize=1319 outsize=488 ok=1
+Cmd: preprocess
+  insize=4462 outsize=1030 ok=1
+Cmd: preprocess
+  insize=791 outsize=379 ok=1
+Cmd: preprocess
+  insize=969 outsize=479 ok=1
+Cmd: preprocess
+  insize=1006 outsize=447 ok=1
+Cmd: preprocess
+  insize=996 outsize=437 ok=1
+Cmd: preprocess
+  insize=976 outsize=455 ok=1
+Cmd: preprocess
+  error: 1 plat 16 at (27): Duplicate #pragma fragment found, ignoring: #pragma fragment frag
+  error: 1 plat 16 at (27): Duplicate #pragma vertex found, ignoring: #pragma vertex vert
+  insize=933 outsize=334 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (31): 'vert' : function already has a body\nCompiling Vertex program
+  error: 2 plat 0 at (35): 'frag' : function already has a body\nCompiling Vertex program
+  api=0 type=0 insize=902 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=1042 outsize=433 ok=1
+Cmd: preprocess
+  insize=2735 outsize=971 ok=1
