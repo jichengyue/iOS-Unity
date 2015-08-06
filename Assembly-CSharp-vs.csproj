@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\PlayerAnimaition.cs" />
      <Compile Include="Assets\Scripts\SceneCamera.cs" />
      <Compile Include="Assets\Scripts\touch_change_scene_ZJU.cs" />
+     <Compile Include="Assets\Scripts\touch_rotate_ZJU.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />

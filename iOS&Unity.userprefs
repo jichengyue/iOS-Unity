@@ -1,15 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Image3DViewer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Character Controllers/Sources/Scripts/MouseLook.cs">
     <Files>
-      <File FileName="Assets/Scripts/Image3DViewer.cs" Line="23" Column="3" />
+      <File FileName="Assets/Scripts/Image3DViewer.cs" Line="41" Column="28" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/MouseLook.cs" Line="45" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Sean/Project/Unity/iOS&amp;Unity/Assets/Scripts/Image3DViewer.cs" line="18" />
-      <Breakpoint file="/Users/Sean/Project/Unity/iOS&amp;Unity/Assets/Scripts/Image3DViewer.cs" line="22" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
