@@ -106,5 +106,9 @@ public class Image3DViewer : MonoBehaviour {
 		}
 		
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), image, ScaleMode.StretchToFill, true, 0);	
+
+		if (GUI.Button (new Rect (0 , 0 , Screen.width/8 , Screen.height/8), "Return")) {
+			Application.LoadLevel("Start_Scene");
+		}
 	}
 }

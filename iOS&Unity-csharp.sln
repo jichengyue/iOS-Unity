@@ -5,8 +5,6 @@ Project("{BF28B2C6-614F-1660-1960-5BC1014653E4}") = "iOS&Unity", "Assembly-CShar
 EndProject
 Project("{BF28B2C6-614F-1660-1960-5BC1014653E4}") = "iOS&Unity", "Assembly-CSharp-vs.csproj", "{13DAC024-0300-19A8-4A1C-F46433FB0805}"
 EndProject
-Project("{BF28B2C6-614F-1660-1960-5BC1014653E4}") = "iOS&Unity", "Assembly-CSharp-Editor-firstpass-vs.csproj", "{02EEA767-B9DB-4445-597E-48DC6604FE74}"
-EndProject
 Project("{BF28B2C6-614F-1660-1960-5BC1014653E4}") = "iOS&Unity", "Assembly-CSharp-Editor-vs.csproj", "{D7475DAA-E48A-34F9-B3DB-ADD5DF509884}"
 EndProject
 Global
@@ -23,10 +21,6 @@ Global
 		{13DAC024-0300-19A8-4A1C-F46433FB0805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13DAC024-0300-19A8-4A1C-F46433FB0805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13DAC024-0300-19A8-4A1C-F46433FB0805}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02EEA767-B9DB-4445-597E-48DC6604FE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02EEA767-B9DB-4445-597E-48DC6604FE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02EEA767-B9DB-4445-597E-48DC6604FE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02EEA767-B9DB-4445-597E-48DC6604FE74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7475DAA-E48A-34F9-B3DB-ADD5DF509884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7475DAA-E48A-34F9-B3DB-ADD5DF509884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7475DAA-E48A-34F9-B3DB-ADD5DF509884}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																									GlobalSection(MonoDevelopProperties) = preSolution
+																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

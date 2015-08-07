@@ -5,6 +5,8 @@ public class touch_change_scene_ZJU : MonoBehaviour {
 
 //	public Object bullet;
 
+	int firstTouch = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,6 +18,11 @@ public class touch_change_scene_ZJU : MonoBehaviour {
 		if (Input.touchCount == 1)
 		{
 			if(Input.GetTouch(0).phase == TouchPhase.Began){
+				firstTouch ++;
+				firstTouch = firstTouch % 2;
+			}
+
+			if(Input.GetTouch(0).phase == TouchPhase.Began && firstTouch != 1){
 
 				Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch(0).position);
 
@@ -41,6 +48,12 @@ public class touch_change_scene_ZJU : MonoBehaviour {
 					Debug.Log("Not Hit");
 				}
 			}
+		}
+	}
+
+	void OnGUI(){
+		if (GUI.Button (new Rect (0 , 0 , Screen.width/8 , Screen.height/8), "Return")) {
+			Application.LoadLevel("Start_Scene");
 		}
 	}
 }
