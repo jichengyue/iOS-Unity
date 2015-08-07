@@ -76,13 +76,8 @@ public class touch_rotate_ZJU : MonoBehaviour {
 				}
 			}        
 		}
-	}
 
 
-	void OnGUI(){
 
-		if (GUI.Button (new Rect (0 , 0 , Screen.width/8 , Screen.height/8), "Return")) {
-			Application.LoadLevel("Start_Scene");
-		}
 	}
 }
