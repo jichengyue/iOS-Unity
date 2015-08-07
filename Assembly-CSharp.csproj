@@ -57,11 +57,14 @@
      <Compile Include="Assets\Scripts\Move_buttom_FPC.cs" />
      <Compile Include="Assets\Scripts\MovementMotor.cs" />
      <Compile Include="Assets\Scripts\Pic1.cs" />
+     <Compile Include="Assets\Scripts\Pic_return.cs" />
+     <Compile Include="Assets\Scripts\Pic_video.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimaition.cs" />
      <Compile Include="Assets\Scripts\SceneCamera.cs" />
      <Compile Include="Assets\Scripts\Start_Scene.cs" />
      <Compile Include="Assets\Scripts\img_scan.cs" />
+     <Compile Include="Assets\Scripts\test_return.cs" />
      <Compile Include="Assets\Scripts\touch_change_scene_ZJU.cs" />
      <Compile Include="Assets\Scripts\touch_rotate_ZJU.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

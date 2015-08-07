@@ -8,9 +8,11 @@ public class Pic1 : MonoBehaviour {
 	String Pic_file="pic_file1.txt";
 	String Article="";
 	private bool showMsg = false;
+	private bool showVideo = false;
 	private float screen_width;
 	private float screen_height;
 	public GUIContent gc;
+	bool videoflag = true;
 	// Use this for initialization
 	void Start () {
 		screen_width = Screen.width;
@@ -22,6 +24,7 @@ public class Pic1 : MonoBehaviour {
 		{  
 			Article+=str;
 		} 
+		Debug.Log (Article);
 		gc.text = Article;
 	}
 	
@@ -40,9 +43,22 @@ public class Pic1 : MonoBehaviour {
 			showMsg = !showMsg;
 		if (showMsg) {
 			//GUI.Label (new Rect (0, 150, (1000.0f / 1280.0f) * screen_width, screen_height), Article);
-
 			GUI.Label (new Rect (0, 150, (1000.0f / 1280.0f) * screen_width, screen_height), gc);
 		}
+		if (GUI.Button (new Rect ((1000.0f / 1280.0f) * screen_width, (60.0f / 800.0f) * screen_height, (200.0f / 1280.0f) * screen_width, (50.0f / 800.0f) * screen_height), "视频信息")) {
+			showVideo = !showVideo;
+		}
+			if (showVideo){
+				//Debug.Log("dddddddd");
+			    if(!videoflag){
+				GUI.Label(new Rect(0, 200, (1000.0f / 1280.0f) * screen_width, screen_height),"no video");
+				//videoflag = false;
+				}else {
+					Application.LoadLevel("Pic1_video");
+				}
+			}
+			
+		
 	}
 
 	ArrayList LoadFile(string path,string name)   

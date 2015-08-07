@@ -12,10 +12,15 @@ public class CoverFlow : MonoBehaviour
 	private float ITEM_W=10f;   //plane长宽为10M（10个单位长度）
 	
 	private float sliderValue=0f;
+	private int timestamp = 21;
+	private int _index = 0;
+
 	
 	void Start ()
 	{
 		loadImages ();
+			//moveSlider (6);
+		moveSlider(0);
 	}
 	
 	void loadImages ()
@@ -30,19 +35,54 @@ public class CoverFlow : MonoBehaviour
 			
 			photo.transform.eulerAngles = new Vector3 (-90f,0f, 0f);
 			photo.transform.localScale=new Vector3(-1.5f,1f,-1f);   //根据图片设定长宽比，z：－1，使图正向
-			photo.GetComponent<Renderer>().material.mainTexture = Resources.Load ("photo" + i.ToString(),typeof(Texture2D)) as Texture2D;
+			photo.GetComponent<Renderer>().material.mainTexture = Resources.Load ("s_scene/photo" + i.ToString(),typeof(Texture2D)) as Texture2D;
 			
 			
 			photo.transform.parent=gameObject.transform;
 		}
 		
 		moveSlider(photos.Count/2);
+		//moveSlider(0);
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 
+		if (Input.touchCount != 1 )
+			return;
+		if(Input.GetTouch (0).phase == TouchPhase.Moved)
+		{
+			//timestamp = 0;
+			if (Input.GetTouch (0).deltaPosition.x < 0 - Mathf.Epsilon) {
+				//_index = _index == photosCount ? _index : _index;
+				_index++;
+				if (_index>10)
+					_index=10;
+			}
+			else {//左移
+				//_index = _index == 0 ? 1 : 1;
+				_index--;
+				if (_index<=0)
+					_index=0;
+			}
+			moveSlider(_index);
+			sliderValue=_index;
+		}
+
+		if(Input.GetTouch (0).phase == TouchPhase.Began)
+			if (Input.GetTouch (0).phase == TouchPhase.Ended)
+			{
+				RaycastHit hit;
+				Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+				
+				if (Physics.Raycast(ray, out hit))
+				{
+					//Debug.Log(hit.transform.name);
+					//Debug.Log(hit.transform.tag);
+					Application.LoadLevel(int.Parse(hit.transform.name));
+				}
+			}
 	}
 	
 	void moveSlider(int id){
@@ -90,13 +130,8 @@ public class CoverFlow : MonoBehaviour
 	
 	void OnGUI ()
 	{
-		
-		sliderValue = GUI.HorizontalSlider(new Rect((Screen.width-175f)/2,Screen.height-30f,175f,30f), 
-		                                   sliderValue, 0f, photosCount-1);
-		
-		
-		moveSlider((int)sliderValue);
-		//Debug.Log ("sli:" + (int)sliderValue);
+
 	}
+
 	
 }

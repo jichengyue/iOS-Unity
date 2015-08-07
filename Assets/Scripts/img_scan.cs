@@ -16,7 +16,7 @@ public class img_scan : MonoBehaviour {
 	private Vector2 touchFirst = Vector2.zero;
 	private Vector2 touchSecond = Vector2.zero;
 	
-	private string[] des = {"甘肃敦煌－白马塔遗址","甘肃敦煌－大漠与烽燧","甘肃-敦煌故城址","甘肃敦煌-汉长城","甘肃敦煌-河仓城","甘肃敦煌-阳关遗址"};
+	private string[] des = {"1","2","3","4","5","6"};
 	
 	// Use this for initialization
 	void Start () {
@@ -52,7 +52,7 @@ public class img_scan : MonoBehaviour {
 		if (Input.touchCount == 1 && Input.GetTouch (0).phase == TouchPhase.Moved && timestamp>20) {
 			timestamp = 0;
 			//右移
-			if (Input.GetTouch (0).deltaPosition.x > 0 - Mathf.Epsilon) {
+			if (Input.GetTouch (0).deltaPosition.x < 0 - Mathf.Epsilon) {
 				_index = _index == _txtAll.Length - 1 ? -1 : _index;
 				_index++;
 			}
@@ -67,9 +67,7 @@ public class img_scan : MonoBehaviour {
 	
 	void OnGUI(){
 		
-		if (GUI.Button (new Rect (0 , 0 , (200.0f/1280.0f)*screen_width , (50.0f/800.0f)*screen_height), "Return")) {
-			Application.LoadLevel("Start_Scene");
-		}
+
 		
 		int width = _txtAll[_index].width;
 		int height = _txtAll [_index].height;
@@ -77,6 +75,10 @@ public class img_scan : MonoBehaviour {
 		scale = Mathf.Min (screen_width/width,screen_height/height);
 		GUI.DrawTexture (new Rect((screen_width-width*scale)*0.5f,(screen_height-height*scale)*0.5f,width*scale,height*scale),_txtAll[_index]);
 		GUI.Label (new Rect(10,(100.0f/800.0f)*screen_height,screen_width,100),des[_index]);
+		//GUILayout.Label (des [_index]);
+		if (GUI.Button (new Rect (0 , 0 , (200.0f/1280.0f)*screen_width , (50.0f/800.0f)*screen_height), "Return")) {
+			Application.LoadLevel("Start_Scene");
+		}
 	}
 	
 }

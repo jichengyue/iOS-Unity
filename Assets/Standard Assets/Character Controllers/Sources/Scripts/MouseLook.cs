@@ -129,7 +129,7 @@ public class MouseLook : MonoBehaviour {
 				Debug.Log(stack);
 
 				tag = int.Parse(hit.transform.tag);
-				Application.LoadLevel(tag);
+				Application.LoadLevel("Pic1");
 			}
 			
 		}else{

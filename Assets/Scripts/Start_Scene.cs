@@ -21,7 +21,7 @@ public class Start_Scene : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		MousePick ();
 		MobilePick ();
 	}
@@ -29,7 +29,7 @@ public class Start_Scene : MonoBehaviour {
 	void OnGUI() {
 		GUILayout.Label ("浙江省博物馆文物展", label);
 		//GUI.Label (new Rect(200,200,800,100),"浙江省博物馆文物展示");
-		GUI.DrawTexture (new Rect(0,0,screen_width,screen_height),bg);
+//		GUI.DrawTexture (new Rect(0,0,screen_width,screen_height),bg);
 		//BeginUIResizing ();
 		//GUI.skin = skin_main;
 		//EndUIResizing ();
@@ -37,21 +37,22 @@ public class Start_Scene : MonoBehaviour {
 
 	void MobilePick()
 	{
-		if (Input.touchCount != 1 )
+		if (Input.touchCount != 2 )
 			return;
-		
-		if (Input.GetTouch(0).phase == TouchPhase.Began)
-		{
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-			
-			if (Physics.Raycast(ray, out hit))
+		if ( Input.GetTouch (0).phase == TouchPhase.Stationary)
+			//if ( Input.GetTouch (0).phase == TouchPhase.Stationary)
+
 			{
-				//Debug.Log(hit.transform.name);
-				//Debug.Log(hit.transform.tag);
-				Application.LoadLevel(int.Parse(hit.transform.name));
+				RaycastHit hit;
+				Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+				
+				if (Physics.Raycast(ray, out hit))
+				{
+					//Debug.Log(hit.transform.name);
+					//Debug.Log(hit.transform.tag);
+					Application.LoadLevel(int.Parse(hit.transform.name));
+				}
 			}
-		}
 	}
 	
 	void MousePick()
@@ -65,6 +66,7 @@ public class Start_Scene : MonoBehaviour {
 			{
 				//Debug.Log(hit.transform.name);
 				//Debug.Log(hit.transform.tag);
+				Application.LoadLevel(int.Parse(hit.transform.name));
 			}
 		}
 	}
