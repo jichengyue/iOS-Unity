@@ -95,6 +95,11 @@ public class Image3DViewer : MonoBehaviour {
 
 	void OnGUI(){
 
+//		GUI.contentColor = Color.black;
+//		GUI.backgroundColor = Color.black;
+
+
+
 //		根据xindex 和 yindex 得到图片的文件名
 		string imageName = "img_0_" + yIndex + "_" + xIndex + "[1]";
 		image = (Texture2D)Resources.Load (imageName);
@@ -106,5 +111,9 @@ public class Image3DViewer : MonoBehaviour {
 		}
 		
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), image, ScaleMode.StretchToFill, true, 0);	
+
+		if (GUI.Button (new Rect (0 , 0 , Screen.width/8 , Screen.height/8), "Return")) {
+			Application.LoadLevel("Start_Scene");
+		}
 	}
 }

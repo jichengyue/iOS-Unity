@@ -22,19 +22,13 @@ public class touch_change_scene_ZJU : MonoBehaviour {
 				RaycastHit hit;
 
 				if (Physics.Raycast (ray, out hit)) {
-					// Create a particle if hit
-					//如果击中，创建一个粒子
-//					Debug.Log("Hit : " + hit.transform.name);
 
 					int tag;
 
-//					if(hit.transform.tag == "Collider"){
-//						Application.LoadLevel(1);
-//					}
-
 					if(int.TryParse(hit.transform.tag, out tag) == true){
 						tag = int.Parse(hit.transform.tag);
-						Application.LoadLevel(tag);
+//						Application.LoadLevel(tag);
+						Application.LoadLevel("ima_scan");
 					}
 
 				}else{
