@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour {
 
 	float touchDeltaX = 0;
 	float touchDeltaY = 0;
-	float touchDeltaTime = 0;
+//	float touchDeltaTime = 0;
 
 	string stack = "";
 	Ray ray;
@@ -62,9 +62,9 @@ public class MouseLook : MonoBehaviour {
 				
 				touchDeltaX += touchDeltaPosition.x;
 				touchDeltaY += touchDeltaPosition.y;
-				touchDeltaTime += Time.deltaTime;
+//				touchDeltaTime += Time.deltaTime;
 
-				Debug.Log("touchDeltaTime : " + touchDeltaTime);
+//				Debug.Log("touchDeltaTime : " + touchDeltaTime);
 
 //				Debug.Log("touchDeltaPosition.x :" + touchDeltaPosition.x + "touchDeltaPosition.y:" + touchDeltaPosition.y);
 //				Debug.Log("deltax :" + touchDeltaX + "deltay:" + touchDeltaY);
@@ -74,7 +74,7 @@ public class MouseLook : MonoBehaviour {
 
 				int moveX = 2;
 				float moveY = 0.5f;
-
+//				Vector3 direction = transform.forward;
 
 
 				if(touchDeltaX > delyXParameter){ // 向右滑动
@@ -97,6 +97,7 @@ public class MouseLook : MonoBehaviour {
 					touchDeltaY = 0;
 					
 					transform.Translate(0, 0, moveY);
+//					GetComponent<Rigidbody>().AddForce(direction * 5, ForceMode.Acceleration);
 				}else if(touchDeltaY < -delyYParameter){
 
 					touchDeltaX = 0;
