@@ -32,6 +32,7 @@ public class MouseLook : MonoBehaviour {
 
 	float touchDeltaX = 0;
 	float touchDeltaY = 0;
+	float touchDeltaTime = 0;
 
 	string stack = "";
 	Ray ray;
@@ -44,7 +45,7 @@ public class MouseLook : MonoBehaviour {
 		{
 			if(Input.GetTouch(0).phase == TouchPhase.Began){
 
-				Debug.Log("Touch Begin");
+//				Debug.Log("Touch Begin");
 				stack += "1";
 
 				ray = Camera.main.ScreenPointToRay (Input.GetTouch(0).position);	
@@ -54,13 +55,16 @@ public class MouseLook : MonoBehaviour {
 			{
 				stack += "2";
 
-				Debug.Log("Touch Move");
+//				Debug.Log("Touch Move");
 
 				//获取手指自最后一帧的移动
 				Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 				
 				touchDeltaX += touchDeltaPosition.x;
 				touchDeltaY += touchDeltaPosition.y;
+				touchDeltaTime += Time.deltaTime;
+
+				Debug.Log("touchDeltaTime : " + touchDeltaTime);
 
 //				Debug.Log("touchDeltaPosition.x :" + touchDeltaPosition.x + "touchDeltaPosition.y:" + touchDeltaPosition.y);
 //				Debug.Log("deltax :" + touchDeltaX + "deltay:" + touchDeltaY);
@@ -69,7 +73,9 @@ public class MouseLook : MonoBehaviour {
 				int delyYParameter = 50;
 
 				int moveX = 2;
-				int moveY = 2;
+				float moveY = 0.5f;
+
+
 
 				if(touchDeltaX > delyXParameter){ // 向右滑动
 					
@@ -112,7 +118,7 @@ public class MouseLook : MonoBehaviour {
 		} else {
 
 			if (stack.Contains ("2")) {
-				Debug.Log ("Has Move");
+//				Debug.Log ("Has Move");
 			} else {
 				touched = true;
 			}
